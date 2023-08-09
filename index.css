@@ -1,0 +1,54 @@
+body {
+  background-color: black;
+  color: aliceblue;
+  font-family: "Akshar", sans-serif;
+}
+a {
+  color: white;
+}
+
+.container {
+  position: relative;
+  display: inline-block;
+}
+
+.centered {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 87%;
+  opacity: 0.5;
+  margin-top: 1%;
+}
+
+h1 {
+  position: absolute;
+  text-align: center;
+  color: white;
+  top: 10%;
+  left: 15%;
+}
+h2 {
+  position: absolute;
+  text-align: center;
+  color: white;
+  top: 30%;
+  left: 5px;
+  font-size: 2.25vw;
+}
+p {
+  font-weight: 1000;
+}
+span {
+  font-family: "Akshar", sans-serif;
+}
+button {
+  background-color: green;
+  border-color: green;
+  color: white;
+  box-shadow: none;
+  height: 10%;
+  width: 75%;
+  background: green;
+  border-radius: 360px;
+}
