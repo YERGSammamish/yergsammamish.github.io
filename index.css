@@ -1,10 +1,10 @@
 body {
-  background-color: black;
+  background-color: #1c1c1c;
   color: aliceblue;
   font-family: "Akshar", sans-serif;
 }
 a {
-  color: white;
+  color: inherit;
 }
 
 .container {
@@ -51,4 +51,10 @@ button {
   width: 75%;
   background: green;
   border-radius: 360px;
+}
+li {
+  cursor: pointer;
+}
+.button {
+  cursor: pointer;
 }
