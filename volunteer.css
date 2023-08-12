@@ -8,6 +8,9 @@ body {
 iframe {
   filter: invert(0.9) saturate(0.5) hue-rotate(145deg);
 }
+a {
+  color: inherit;
+}
 /* p {
   font-weight: 90000;
 } */
