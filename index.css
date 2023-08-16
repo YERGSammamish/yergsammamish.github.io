@@ -11,7 +11,9 @@ a {
   position: relative;
   display: inline-block;
 }
-
+.whiteline {
+  background-color: #ffffff;
+}
 .centered {
   display: block;
   margin-left: auto;
@@ -47,14 +49,45 @@ button {
   border-color: green;
   color: white;
   box-shadow: none;
-  height: 10%;
+  height: 15%;
   width: 75%;
   background: green;
-  border-radius: 360px;
+  border-radius: 300px;
+  overflow: hidden;
+  box-sizing: border-box;
 }
 li {
   cursor: pointer;
 }
 .button {
   cursor: pointer;
+}
+style {
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr; /* Two columns of equal width */
+    gap: 10px; /* Gap between grid items */
+    justify-content: center; /* Center content horizontally */
+    align-items: top; /* Center content vertically */
+    margin-bottom: 8%;
+  }
+
+  .grid-item {
+    text-align: center;
+  }
+
+  .table-container {
+    margin: 3.5%;
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr); /* Four equal rows */
+    gap: 10px; /* Gap between grid items */
+    justify-content: center; /* Center content horizontally */
+    align-items: start; /* Center content vertically */
+  }
+
+  .table-item {
+    border: 1px solid #ccc;
+    text-align: center;
+  }
 }

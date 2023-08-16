@@ -2,7 +2,37 @@
 <html lang="en">
   <head>
     <title>My Page</title>
-      
+
+    <style>
+      .grid-container {
+        display: grid;
+        grid-template-columns: 1fr 2fr; /* Two columns of equal width */
+        gap: 10px; /* Gap between grid items */
+        justify-content: center; /* Center content horizontally */
+        align-items: top; /* Center content vertically */
+        margin-bottom: 8%;
+      }
+
+      .grid-item {
+        text-align: center;
+      }
+
+      .table-container {
+        margin: 3.5%;
+        display: grid;
+
+        grid-template-columns: repeat(4, 1fr); /* Four equal rows */
+        gap: 10px; /* Gap between grid items */
+        justify-content: center; /* Center content horizontally */
+        align-items: start; /* Center content vertically */
+      }
+
+      .table-item {
+        border: 1px solid #ccc;
+        text-align: center;
+      }
+    </style>
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -33,10 +63,11 @@
         align-items: center;
         margin-top: 3vw;
         margin-bottom: 0%;
+        margin-left: 2%;
         cursor: pointer;
       "
     >
-      <li style="display: inline; margin-left: 1.5%; cursor: pointer;">
+      <li style="display: inline; margin-left: 1.5%; cursor: pointer">
         <a href="volunteer.html">Volunteer Opportunities</a>
       </li>
       <li style="display: inline; margin-left: 1%"></li>
@@ -44,20 +75,29 @@
       <li style="display: inline; margin-left: 1%"></li>
       <a href="about.html">About</a>
     </ul>
-    <div class="container">
-      <img src="Realpond.png" class="centered" style="width: 93%" />
+    <div
+      class="container"
+      style="
+        display: flex;
+        align-items: start;
+        justify-content: center;
+        display: flex;
+      "
+    >
+      <!-- <img src="Realpond.png" class="centered" style="width: 93%" />
       <h1 style="text-align: center; font-size: 5vw">
         Youth Environmental Restoration Group
-      </h1>
+      </h1> -->
+      <img style="width: 90%; margin-top: 2%" src="ourpond.png" alt="" />
 
-      <h2 style="text-align: center; margin-left: 25%; width: 50%">
+      <!-- <h2 style="text-align: center; margin-left: 25%; width: 50%">
         We are an organization dedicated to restoring the natural beauty of
         Sammamish, WA by restoring spaces and making havens for wildlife.
-      </h2>
+      </h2> -->
     </div>
     <div>
       <!-- <p style="display: inline; margin-left: 9%">Volunteering</p> -->
-      <span
+      <!-- <span
         style="
           text-align: center;
           width: 100%;
@@ -94,50 +134,124 @@
             padding-left: 2.6%;
           "
         />
-      </span>
+      </span> -->
+      <div
+        class="grid-container"
+        style="
+          align-items: center;
+          margin-left: 5%;
+          margin-right: 5%;
+          margin-top: 3%;
+          margin-bottom: 10%;
+        "
+      >
+        <div class="grid-item" style="margin-top: -37%">
+          <span style="font-size: 3vw; margin-bottom: 10%; margin-left: 1%"
+            >Volunteering</span
+          >
+          <div
+            style="
+              font-size: 1.75vw;
+              width: 70%;
+              margin-bottom: 5%;
+              margin-left: 15%;
+              margin-right: 10%;
+            "
+          >
+            Restore wildlife spaces by removing invasive plants, cleaning the
+            pond, and planting native plants etc.
+          </div>
+          <div style="box-sizing: border-box">
+            <a href="volunteer.html"
+              ><button
+                style="
+                  font-size: 1.25vw;
+                  cursor: pointer;
+                  font-family: Akshar, sans-serif;
+                "
+              >
+                Volunteer Opportunities
+                <div>
+                  <img
+                    class="button"
+                    style="width: 29%; cursor: pointer"
+                    src="arrow.png"
+                    alt=""
+                  />
+                </div></button
+            ></a>
+          </div>
+        </div>
+        <div class="grid-item">
+          <img
+            src="volunteerphoto.png"
+            style="display: inline; width: 100%; margin-right: 1%"
+          />
+        </div>
+      </div>
       <div style="font-size: 5vw; text-align: center; margin-top: -7%">
         Blog
       </div>
       <h5 style="font-size: 2vw; text-align: center; margin-top: 1%">
-        example text for blog
+        <i>coming soon</i>
       </h5>
-      <img
-        class="whiteline"
-        style="width: 92%; height: 0.75em; margin-left: 4%"
-        src="whiteline.png"
-      />
-      <div
-        style="
-          text-align: left;
-          width: 10%;
-          margin-left: 4%;
-          font-size: 3vw;
-          margin-top: 1.5%;
-        "
-      >
-        Youth<br />
-        Environmental<br />
-        Restoration<br />
-        Group
+      <hr style="height: 0" />
+
+      <!--  Us!
       </div>
-      <div style="font-size: 2vw; margin-top: -16.25%; margin-left: 35%">
-        Follow Us!
-      </div>
-      <a target="_blank" href="https://twitter.com/home"><img style="width: 3.5%; margin-left: 33%; margin-bottom: -.25%; cursor: pointer;" src="twitterlogox.png" /></a>
-      <a target="_blank" href="https://www.instagram.com/yerg_sammamish/"><img style="width: 3%; margin-right: 0%; cursor: pointer;" src="instagramlogo.png" /></a>
-      <a target="_blank" href="https://www.facebook.com/"><img style="width: 3%; margin-right: -1%; cursor: pointer;" src="facebooklogo.png" /></a>
-      <img
-        style="width: 4%; margin-left: 9%; display: inline; margin-bottom: -0.75%;"
-        src="emailogo.png"
-      />
-      <div style="font-size: 2vw; margin-left: 55%; margin-top: -6%">
-        Contact Us!
-        <p style="font-size: 1.5vw; margin-top: 1%">yergsammamish@gmail.com</p>
-      </div>
+      
+      
       <p style="margin-left: 80%; font-size: 2vw; margin-top: -6.75%">
         About Us!
-        <p style="margin-left: 80.8%; margin-top: -1.5%; font-size: 1.5vw; cursor: pointer;"><u>Our Team</u></p>
       </p>
+
+      <p
+        style="
+          margin-left: 80.8%;
+          margin-top: -1.5%;
+          font-size: 1.5vw;
+          cursor: pointer;
+        "
+      >
+        <a href="about.html"><u>Our Team</u></a>
+      </p> -->
+
+      <div class="table-container">
+        <div class="table-item" style="text-align: start; font-size: 2vw">
+          Youth<br />
+          Environmental<br />
+          Restoration<br />
+          Group
+        </div>
+        <div class="table-item">
+          <div style="font-size: 2vw">Follow Us</div>
+          <a target="_blank" href="https://twitter.com/YERG_Sammamish"
+            ><img style="cursor: pointer; width: 10%" src="twitterlogox.png"
+          /></a>
+          <a target="_blank" href="https://www.instagram.com/yerg_sammamish/"
+            ><img style="width: 10%; cursor: pointer" src="instagramlogo.png"
+          /></a>
+          <a
+            target="_blank"
+            href="https://www.facebook.com/profile.php?id=100095336633923"
+            ><img
+              style="width: 10%; margin-right: -1%; cursor: pointer"
+              src="facebooklogo.png"
+          /></a>
+        </div>
+        <div class="table-item">
+          <div style="font-size: 2vw">
+            Contact Us!
+            <div>
+              <p style="font-size: 1.5vw; margin-top: 1%">
+                <img style="width: 10%" src="emailogo.png" />
+                yergsammamish@gmail.com
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="table-item">Item 4</div>
+      </div>
     </div>
   </body>
 </html>
