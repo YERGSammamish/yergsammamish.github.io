@@ -4,12 +4,40 @@
     <title>My Page</title>
 
     <style>
+      .email-container {
+        display: flex; /* Use flex display for side-by-side layout */
+        align-items: center; /* Center vertically within the container */
+        gap: 10px; /* Gap between the email address and icon */
+        margin-left: -13.75%;
+        box-sizing: border-box;
+      }
+
+      .email-icon {
+        width: 10%; /* Set the width of the icon */
+        height: 10%; /* Set the height of the icon */
+        /* You can use a background image or an inline SVG for the icon */
+        background-image: url("email_icon.png"); /* Replace with your icon URL */
+        background-size: cover; /* Adjust to fit the icon */
+      }
+
+      .email-address {
+        flex: 1; /* Allow the email address to take up remaining space */
+        overflow: hidden; /* Hide overflow text if it's too long */
+      }
+      .contact-container {
+        justify-content: center;
+        align-items: center;
+        display: grid;
+        grid-template-columns: auto 2fr;
+        gap: 0px;
+      }
+      .contact-item {
+        box-sizing: border-box;
+      }
       .grid-container {
         display: grid;
         grid-template-columns: 1fr 2fr; /* Two columns of equal width */
         gap: 10px; /* Gap between grid items */
-        justify-content: center; /* Center content horizontally */
-        align-items: top; /* Center content vertically */
         margin-bottom: 8%;
       }
 
@@ -22,13 +50,11 @@
         display: grid;
 
         grid-template-columns: repeat(4, 1fr); /* Four equal rows */
-        gap: 10px; /* Gap between grid items */
         justify-content: center; /* Center content horizontally */
         align-items: start; /* Center content vertically */
       }
 
       .table-item {
-        border: 1px solid #ccc;
         text-align: center;
       }
     </style>
@@ -74,6 +100,8 @@
       <a href="blog.html">Blog</a>
       <li style="display: inline; margin-left: 1%"></li>
       <a href="about.html">About</a>
+      <li style="display: inline; margin-left: 1%"></li>
+      <a href="index.html">Home</a>
     </ul>
     <div
       class="container"
@@ -84,57 +112,9 @@
         display: flex;
       "
     >
-      <!-- <img src="Realpond.png" class="centered" style="width: 93%" />
-      <h1 style="text-align: center; font-size: 5vw">
-        Youth Environmental Restoration Group
-      </h1> -->
       <img style="width: 90%; margin-top: 2%" src="ourpond.png" alt="" />
-
-      <!-- <h2 style="text-align: center; margin-left: 25%; width: 50%">
-        We are an organization dedicated to restoring the natural beauty of
-        Sammamish, WA by restoring spaces and making havens for wildlife.
-      </h2> -->
     </div>
     <div>
-      <!-- <p style="display: inline; margin-left: 9%">Volunteering</p> -->
-      <!-- <span
-        style="
-          text-align: center;
-          width: 100%;
-          font-size: 2vw;
-          margin: 0%;
-          display: inline-flex;
-          justify-content: center;
-          margin-top: 1%;
-        "
-      >
-        <p
-          style="margin-top: -1%; width: 20%; margin-left: -2%; display: inline; font-size: 1.3vw;"
-        >
-          <span style="font-size: 3vw; margin-bottom: 10%; margin-left: -4%">Volunteering</span>
-          <br />
-          <br />
-          Restore wildlife spaces by removing invasive plants, cleaning the
-            pond, and planting native plants etc.
-            <a href="volunteer.html"><button style="margin-top: 20%; font-size: 1.25vw; cursor: pointer;">
-              <span style="text-align: center; cursor: pointer;"
-                >Volunteer Opportunities<br />
-                <img class="button" style="width: 29%; cursor: pointer;" src="arrow.png" alt="" />
-              </span>
-            </button></a>
-        </p>
-
-        <img
-          src="volunteerphoto.png"
-          style="
-            display: inline;
-            width: 68.75%;
-            margin-right: 1%;
-            margin-bottom: 10%;
-            padding-left: 2.6%;
-          "
-        />
-      </span> -->
       <div
         class="grid-container"
         style="
@@ -195,36 +175,17 @@
       <h5 style="font-size: 2vw; text-align: center; margin-top: 1%">
         <i>coming soon</i>
       </h5>
-      <hr style="height: 0" />
-
-      <!--  Us!
-      </div>
-      
-      
-      <p style="margin-left: 80%; font-size: 2vw; margin-top: -6.75%">
-        About Us!
-      </p>
-
-      <p
-        style="
-          margin-left: 80.8%;
-          margin-top: -1.5%;
-          font-size: 1.5vw;
-          cursor: pointer;
-        "
-      >
-        <a href="about.html"><u>Our Team</u></a>
-      </p> -->
+      <hr style="height: 12px; width: 92.5%; background-color: #ffffff" />
 
       <div class="table-container">
-        <div class="table-item" style="text-align: start; font-size: 2vw">
+        <div class="table-item" style="text-align: start; font-size: 3.5vw">
           Youth<br />
           Environmental<br />
           Restoration<br />
           Group
         </div>
-        <div class="table-item">
-          <div style="font-size: 2vw">Follow Us</div>
+        <div class="table-item" style="text-align: start">
+          <div style="font-size: 2vw; text-align: start">Follow Us</div>
           <a target="_blank" href="https://twitter.com/YERG_Sammamish"
             ><img style="cursor: pointer; width: 10%" src="twitterlogox.png"
           /></a>
@@ -239,18 +200,23 @@
               src="facebooklogo.png"
           /></a>
         </div>
-        <div class="table-item">
-          <div style="font-size: 2vw">
+        <div class="table-item; text-align: start; width:50%">
+          <div style="font-size: 2vw; text-align: start">
             Contact Us!
-            <div>
-              <p style="font-size: 1.5vw; margin-top: 1%">
-                <img style="width: 10%" src="emailogo.png" />
-                yergsammamish@gmail.com
-              </p>
+            <div class="email-container">
+              <img class="email-icon" src="emailogo.png" alt="" />
+              <div class="email-address">yergsammamish@gmail.com</div>
             </div>
           </div>
         </div>
-        <div class="table-item">Item 4</div>
+        <div class="table-item" style="font-size: 2vw">
+          About Us
+          <p style="padding: 0%; margin: 0%">
+            <a href="about.html"
+              ><u style="font-size: 1.5vw; margin: 0">Our Team</u></a
+            >
+          </p>
+        </div>
       </div>
     </div>
   </body>
